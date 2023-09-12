@@ -4,7 +4,7 @@
 int main() {
     // Create an Account object using the default constructor.
     Account account2(1000.0);
-    
+
     // Create another Account object with an initial balance of $1000.
     Account account1;
 
@@ -17,7 +17,7 @@ int main() {
     account1.deposit(500.0);
 
     // Withdraw $200 from the second account.
-    account2.withdraw(800.0);
+    account2.withdraw(200.0);
 
     // Test the 'getBalance' function again to check the updated balances and print them.
     std::cout << "Account 1 balance after deposit: " << account1.getBalance() << std::endl;
