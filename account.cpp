@@ -11,6 +11,7 @@
 //    c. Function 'deposit' that takes an amount and adds it to the balance.
 //    d. Function 'withdraw' that takes an amount and subtracts it from the balance.
 // 4. A destructor that displays a message like "Account with balance <balance_value> is being destroyed."
+ using namespace std;
 
 #ifndef ACCOUNT_H
 #define ACCOUNT_H
@@ -21,28 +22,34 @@ private:
     double balance;
 
 public:
-    // Default constructor.
-    // Initialize 'balance' to 0.
+    Account() // Default constructor.
+    { balance = 0; };   // Initialize 'balance' to 0.
     // TODO: Implement the default constructor.
 
     // Parameterized constructor.
-    // Initialize 'balance' with the provided 'initialBalance'.
+    Account(double initialBalance)
+    { balance=initialBalance; };// Initialize 'balance' with the provided 'initialBalance'.
     // TODO: Implement the parameterized constructor.
 
-    // Getter function to return the current balance.
-    // TODO: Implement the 'getBalance' function.
+    double getBalance() // Getter function to return the current balance.
+    { return balance;   }  // TODO: Implement the 'getBalance' function.
 
-    // Setter function to set the balance to a new value.
-    // TODO: Implement the 'setBalance' function.
+    void setBalance(double NewBalance)  // Setter function to set the balance to a new value.
+    { balance = NewBalance; } // TODO: Implement the 'setBalance' function.
 
-    // Function to deposit an amount into the account.
-    // TODO: Implement the 'deposit' function.
+    void deposit(double Amount) // Function to deposit an amount into the account.
+    { balance += Amount; } // TODO: Implement the 'deposit' function.
 
-    // Function to withdraw an amount from the account.
-    // TODO: Implement the 'withdraw' function.
+    void withdraw(double Amount)    // Function to withdraw an amount from the account.
+    {   if(Amount>balance)
+        {
+            cout<<"Insufficient funds! \n";
+        }
+        else {balance -= Amount;} 
+    } // TODO: Implement the 'withdraw' function.
 
-    // Destructor.
-    // Display a message indicating the account is being destroyed.
+    ~Account()  // Destructor.
+    {  cout << "Account with balance "<< balance <<" is being destroyed. \n"; }; // Display a message indicating the account is being destroyed
     // TODO: Implement the destructor.
 };
 
