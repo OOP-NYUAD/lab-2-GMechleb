@@ -43,7 +43,7 @@ public:
     void withdraw(double Amount)    // Function to withdraw an amount from the account.
     {   if(Amount>balance)
         {
-            cout<<"Insufficient funds! \n";
+            cout<<"Insufficient funds!\n";
         }
         else {balance -= Amount;} 
     } // TODO: Implement the 'withdraw' function.
