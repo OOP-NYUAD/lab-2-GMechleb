@@ -49,7 +49,7 @@ public:
     } // TODO: Implement the 'withdraw' function.
 
     ~Account()  // Destructor.
-    {  cout << "Account with balance "<< balance <<" is being destroyed. \n"; }; // Display a message indicating the account is being destroyed
+    {  cout << "Account with balance "<< balance <<" is being destroyed.\n"; }; // Display a message indicating the account is being destroyed
     // TODO: Implement the destructor.
 };
 
